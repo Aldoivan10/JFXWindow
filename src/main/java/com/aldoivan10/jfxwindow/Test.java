@@ -2,11 +2,7 @@ package com.aldoivan10.jfxwindow;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class Test extends Application
 {
@@ -22,7 +18,10 @@ public class Test extends Application
         window.setWindowTitle("Window test");
 
         JFXButton btn = new JFXButton("Change look and feel");
-        btn.setOnAction(event -> {});
+        btn.setOnAction(event -> {
+            if(window.look().equals(JFXLook.WIN10)) window.setLook(JFXLook.WIN11);
+            else window.setLook(JFXLook.WIN10);
+        });
         window.setContent(btn);
         window.show();
     }

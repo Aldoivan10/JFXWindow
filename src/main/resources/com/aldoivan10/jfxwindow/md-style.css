@@ -84,7 +84,7 @@
     -fx-border-radius: 10;
 }
 
-.jfx-decorator-square, .jfx-decorator-square .resize-border , .jfx-decorator-square .jfx-decorator-buttons-container
+.jfx-decorator-win-10, .jfx-decorator-win-10 .resize-border , .jfx-decorator-win-10 .jfx-decorator-buttons-container
 {
     -fx-background-radius: 0;
     -fx-border-radius: 0;
