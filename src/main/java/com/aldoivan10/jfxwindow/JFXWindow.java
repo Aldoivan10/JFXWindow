@@ -1,15 +1,18 @@
 package com.aldoivan10.jfxwindow;
 
 import com.jfoenix.assets.JFoenixResources;
-import com.jfoenix.controls.JFXDecorator;
-import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.*;
+import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
@@ -23,9 +26,10 @@ public class JFXWindow
     private Scene scene;
     private JFXLook look;
     private final Stage stage;
+    private JFXToolbar toolbar;
     private JFXDecorator decorator;
+    private final BorderPane parent = new BorderPane();
     private final StackPane container = new StackPane();
-
     private final Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
 
     private final ChangeListener<? super Number> win11Listener = (observableValue, lastHeight, newHeight) ->
@@ -37,12 +41,14 @@ public class JFXWindow
     public JFXWindow(Stage stage)
     {
         this.stage = stage;
-        this.decorator = new JFXDecorator(stage,this.container);
+        this.decorator = new JFXDecorator(stage,this.parent);
         this.decorator.setCustomMaximize(true);
         this.scene = new Scene(this.decorator);
         this.stage.setScene(this.scene);
         this.scene.setFill(Color.TRANSPARENT);
         this.stage.initStyle(StageStyle.TRANSPARENT);
+
+        this.parent.setCenter(this.container);
 
         this.addStyleSheets(JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm(),
                 JFoenixResources.load("css/jfoenix-design.css").toExternalForm(),
@@ -85,7 +91,7 @@ public class JFXWindow
 
     public void setWindowMaxSize(double width, double height)
     {
-        this.decorator = new JFXDecorator(this.stage, this.container, false, false, true);
+        this.decorator = new JFXDecorator(this.stage, this.parent, false, false, true);
         Scene scene = new Scene(this.decorator);
         scene.setFill(this.scene.getFill());
         scene.getStylesheets().addAll(this.scene.getStylesheets());
@@ -119,12 +125,41 @@ public class JFXWindow
 
     public void setDrawerContent(Node node)
     {
+        if(this.toolbar == null) { this.toolbar = new JFXToolbar(); }
+
         JFXDrawer drawer = new JFXDrawer();
         drawer.setContent(this.container);
         drawer.setSidePane(node);
+        drawer.setPrefWidth(250);
 
-        this.decorator.setContent(drawer);
+        this.toolbar.setPadding(new Insets(5,10,5,10));
+        this.toolbar.getLeftItems().add(this.buildHmbButton(drawer));
+
+        this.parent.setCenter(drawer);
+        this.parent.setTop(this.toolbar);
     }
+
+    private JFXRippler buildHmbButton(JFXDrawer drawer)
+    {
+        JFXHamburger hmbButton = new JFXHamburger();
+        JFXRippler rippler = new JFXRippler(hmbButton, JFXRippler.RipplerMask.CIRCLE);
+        HamburgerBasicCloseTransition animation = new HamburgerBasicCloseTransition(hmbButton);
+        hmbButton.addEventHandler(MouseEvent.MOUSE_PRESSED, e ->
+        {
+            animation.setRate(animation.getRate() * -1);
+            animation.play();
+
+            if(drawer.isClosed() || drawer.isClosing()) drawer.open();
+            else drawer.close();
+        });
+        animation.setRate(-1);
+        hmbButton.setPadding(new Insets(10));
+        rippler.setRipplerFill(Color.WHITE);
+
+        return rippler;
+    }
+
+    public void setToolbar(JFXToolbar toolbar) { this.toolbar = toolbar; }
 
     public ObservableList<String> stylesheets() { return this.scene.getStylesheets(); }
 
@@ -136,7 +171,9 @@ public class JFXWindow
 
     public JFXDecorator decorator() { return decorator; }
 
-    public StackPane container() { return container; }
+    public StackPane container() { return this.container; }
+
+    public JFXToolbar toolbar() { return this.toolbar; }
 
     public void show() { this.stage.show(); }
 }

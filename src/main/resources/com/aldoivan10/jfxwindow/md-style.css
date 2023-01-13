@@ -1,10 +1,9 @@
-
 *
 {
-    -jfx-primary-color: -deep-purple-A400;
-    -jfx-light-primary-color: -deep-purple-A200;
-    -jfx-dark-primary-color: -deep-purple-A700;
-    -fx-accent: -deep-purple-A100;
+    -jfx-primary-color: -indigo-A400;
+    -jfx-light-primary-color: -indigo-A200;
+    -jfx-dark-primary-color: -indigo-A700;
+    -fx-accent: -indigo-A100;
 
     -jfx-default-thumb: -jfx-primary-color;
     -jfx-focus-color: -jfx-primary-color;
@@ -25,6 +24,14 @@
     -fx-background-radius: 10;
     -fx-padding: 15;
 }
+
+.jfx-hamburger StackPane
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 5;
+}
+
+.jfx-tool-bar { -fx-background-color: -jfx-primary-color; }
 
 .jfx-list-view .jfx-rippler, .jfx-combo-box .jfx-rippler { -jfx-rippler-fill: WHITE; }
 
