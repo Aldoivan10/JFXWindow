@@ -1,8 +1,6 @@
 package com.aldoivan10.jfxwindow;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.application.Application;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Test extends Application
@@ -17,14 +15,7 @@ public class Test extends Application
                 this.getClass().getResource("icon/icon48x48.png").toExternalForm(),
                 this.getClass().getResource("icon/icon64x64.png").toExternalForm());
         window.setWindowTitle("Window test");
-        window.setWindowMinSize(600,600);
-        JFXButton btn = new JFXButton("Change look and feel");
-        btn.setOnAction(event -> {
-            if(window.look().equals(JFXLook.WIN10)) window.setLook(JFXLook.WIN11);
-            else window.setLook(JFXLook.WIN10);
-        });
-        window.setDrawerContent(new StackPane());
-        window.setContent(btn);
+        window.setContent(new JFXComponents(window.parent()));
         window.show();
     }
 

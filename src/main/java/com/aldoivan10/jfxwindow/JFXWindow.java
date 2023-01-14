@@ -49,10 +49,13 @@ public class JFXWindow
         this.stage.initStyle(StageStyle.TRANSPARENT);
 
         this.parent.setCenter(this.container);
+        this.parent.getStyleClass().add("container");
 
         this.addStyleSheets(JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm(),
                 JFoenixResources.load("css/jfoenix-design.css").toExternalForm(),
                 Objects.requireNonNull(this.getClass().getResource("md-style.css")).toExternalForm());
+
+        this.setWindowMinSize(300,250);
         this.setWindowSize(800,600);
         this.setLook(JFXLook.WIN11);
     }
@@ -174,6 +177,8 @@ public class JFXWindow
     public StackPane container() { return this.container; }
 
     public JFXToolbar toolbar() { return this.toolbar; }
+
+    public BorderPane parent() { return this.parent; }
 
     public void show() { this.stage.show(); }
 }
