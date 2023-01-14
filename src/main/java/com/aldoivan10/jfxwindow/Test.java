@@ -15,7 +15,7 @@ public class Test extends Application
                 this.getClass().getResource("icon/icon48x48.png").toExternalForm(),
                 this.getClass().getResource("icon/icon64x64.png").toExternalForm());
         window.setWindowTitle("Window test");
-        window.setContent(new JFXComponents(window.parent()));
+        window.setContent(new JFXComponents(window.parent(), window));
         window.show();
     }
 

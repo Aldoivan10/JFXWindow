@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Created toolbar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" afterDir="false" />
+    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Added more styles for JFoenix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/md-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/md-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/md-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -45,19 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.css.dialects&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "settings.css.dialects",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aldoi\Documents\IdeaProjects\JFXWindow\src\main\resources\com\aldoivan10\jfxwindow\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aldoivan10.jfxwindow.Test" />
@@ -89,7 +98,7 @@
       <updated>1673549868342</updated>
       <workItem from="1673549869390" duration="6000" />
       <workItem from="1673556454247" duration="7697000" />
-      <workItem from="1673634265524" duration="14835000" />
+      <workItem from="1673634265524" duration="19403000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -105,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673580653492</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added more styles for JFoenix">
+      <created>1673661167443</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673661167443</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +141,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created JFXWindow" />
     <MESSAGE value="Created toolbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created toolbar" />
+    <MESSAGE value="Added more styles for JFoenix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more styles for JFoenix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

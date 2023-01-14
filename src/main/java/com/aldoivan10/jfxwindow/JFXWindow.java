@@ -25,6 +25,7 @@ public class JFXWindow
 {
     private Scene scene;
     private JFXLook look;
+    private JFXTheme theme;
     private final Stage stage;
     private JFXToolbar toolbar;
     private JFXDecorator decorator;
@@ -53,11 +54,18 @@ public class JFXWindow
 
         this.addStyleSheets(JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm(),
                 JFoenixResources.load("css/jfoenix-design.css").toExternalForm(),
-                Objects.requireNonNull(this.getClass().getResource("md-style.css")).toExternalForm());
+                Objects.requireNonNull(this.getClass().getResource("css/md-style.css")).toExternalForm());
 
         this.setWindowMinSize(300,250);
         this.setWindowSize(800,600);
+        this.setTheme(JFXTheme.LIGHT);
         this.setLook(JFXLook.WIN11);
+    }
+
+    public void setTheme(JFXTheme theme)
+    {
+        this.decorator.setStyle(String.valueOf(theme));
+        this.theme = theme;
     }
 
     public void setLook(JFXLook look)

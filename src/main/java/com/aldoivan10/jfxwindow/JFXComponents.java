@@ -24,7 +24,7 @@ import javafx.util.Duration;
 
 public class JFXComponents extends GridPane
 {
-    public JFXComponents(BorderPane parent)
+    public JFXComponents(BorderPane parent, JFXWindow window)
     {
         this.setVgap(15);
         this.setHgap(15);
@@ -52,6 +52,11 @@ public class JFXComponents extends GridPane
 
         JFXToggleButton toggleButton = new JFXToggleButton();
         toggleButton.setText("Toggle button");
+        toggleButton.setOnAction(event ->
+        {
+            if(toggleButton.isSelected()) window.setTheme(JFXTheme.DARK);
+            else window.setTheme(JFXTheme.LIGHT);
+        });
         this.addComponent(toggleButton,1,1);
 
         JFXListView<String> listView = new JFXListView<>();

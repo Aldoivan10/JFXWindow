@@ -4,26 +4,28 @@
     -jfx-dark-primary-color: -indigo-A700;
     -jfx-primary-color: -indigo-A400;
     -fx-accent: -indigo-A100;
-    -jfx-font-color: #333333;
 
     -jfx-default-thumb: -jfx-primary-color;
+    -jfx-default-track: #9C9C9C;
     -jfx-checked-color: -jfx-primary-color;
     -jfx-default-color: -jfx-primary-color;
     -jfx-toggle-color: -jfx-primary-color;
     -jfx-focus-color: -jfx-primary-color;
     -fx-text-base-color: -jfx-font-color;
-    -jfx-unfocus-color: #4d4d4d;
+    -jfx-unfocus-color: -fx-un-focus-color;
     -fx-focus-color: -fx-accent;
 }
 
-.container { -fx-background-color: #FAFAFA; }
+.container { -fx-background-color: -jfx-container-color; }
 
 .pane
 {
-    -fx-background-color: WHITE;
+    -fx-background-color: -jfx-pane-color;
     -fx-background-radius: 10;
     -fx-padding: 15;
 }
+
+.jfx-check-box { -fx-text-fill: -fx-text-base-color; }
 
 /*******************************************************************************
  * Toolbar                                                                     *
