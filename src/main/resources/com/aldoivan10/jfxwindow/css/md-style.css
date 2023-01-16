@@ -6,13 +6,13 @@
     -fx-accent: -indigo-A100;
 
     -jfx-default-thumb: -jfx-primary-color;
-    -jfx-default-track: #9C9C9C;
+    -jfx-default-track: -jfx-border-color;
     -jfx-checked-color: -jfx-primary-color;
     -jfx-default-color: -jfx-primary-color;
     -jfx-toggle-color: -jfx-primary-color;
     -jfx-focus-color: -jfx-primary-color;
     -fx-text-base-color: -jfx-font-color;
-    -jfx-unfocus-color: -fx-un-focus-color;
+    -jfx-unfocus-color: -jfx-un-focus-color;
     -fx-focus-color: -fx-accent;
 }
 
@@ -27,33 +27,33 @@
 
 .jfx-check-box { -fx-text-fill: -fx-text-base-color; }
 
-/*******************************************************************************
- * Toolbar                                                                     *
- ******************************************************************************/
+/******************************************************************************
+* Toolbar                                                                     *
+******************************************************************************/
 
 .jfx-tool-bar { -fx-background-color: -jfx-primary-color; }
 
-/*******************************************************************************
- * Date picker                                                                 *
- ******************************************************************************/
+/******************************************************************************
+* Date picker                                                                 *
+******************************************************************************/
 
 .date-picker-popup .time-pane { -fx-background-color: -jfx-primary-color; }
 
-/*******************************************************************************
- * Tooltip                                                                     *
- ******************************************************************************/
+/******************************************************************************
+* Tooltip                                                                     *
+******************************************************************************/
 
 .jfx-tooltip { -fx-background-radius: 4px; }
 
-/*******************************************************************************
- * Spinner                                                                     *
- ******************************************************************************/
+/******************************************************************************
+* Spinner                                                                     *
+******************************************************************************/
 
 .jfx-spinner:determinate .arc { -fx-stroke: -jfx-primary-color; }
 
-/*******************************************************************************
- * Hamburger button                                                            *
- ******************************************************************************/
+/******************************************************************************
+* Hamburger button                                                            *
+******************************************************************************/
 
 .jfx-hamburger StackPane
 {
@@ -79,11 +79,18 @@
 * Chip view                                                                   *
 ******************************************************************************/
 
+.jfx-chip-view
+{
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
+    -fx-background-color: rgba(189, 189, 189, 0.8);
+}
+
 .jfx-chip-view .jfx-chip > HBox
 {
-    -fx-font-size: 12.0;
     -fx-background-color: #E0E0E0;
     -fx-padding: 5 5 5 8;
+    -fx-font-size: 12.0;
     -fx-pref-height: 0;
 }
 
@@ -91,11 +98,32 @@
 * List view                                                                   *
 ******************************************************************************/
 
+.jfx-list-view
+{
+    -fx-background-radius: 2;
+    -fx-background-color: -jfx-border-color;
+}
+
+.jfx-list-view:focused
+{
+    -fx-background-color: derive(-jfx-primary-color,30%), -jfx-light-primary-color;
+    -fx-background-radius: 2, 2;
+}
+
+.jfx-list-view .virtual-flow .corner { -fx-background-color: -jfx-background-color; }
+
+
 .jfx-list-view .jfx-rippler, .jfx-combo-box .jfx-rippler { -jfx-rippler-fill: WHITE; }
 
-.list-view .list-cell:odd { -fx-background-color: -grey-100; }
+.jfx-list-view .jfx-list-cell:odd, .jfx-combo-box .jfx-list-cell:odd { -fx-background-color: rgba(189, 189, 189, 0.15); }
 
-.jfx-list-view .jfx-list-cell:selected, .jfx-combo-box .jfx-list-cell:selected { -fx-background-color: #BDBDBD; }
+.jfx-list-view .jfx-list-cell:selected, .jfx-combo-box .jfx-list-cell:selected { -fx-background-color: rgba(189, 189, 189, .50); }
+
+.jfx-list-view .virtual-flow, .jfx-list-view .jfx-list-cell, .jfx-combo-box .jfx-list-cell, .jfx-combo-box .virtual-flow
+{
+    -fx-background-color: -jfx-background-color;
+    -fx-text-fill: -jfx-unfocus-color;
+}
 
 .jfx-list-view:focused .jfx-list-cell:selected, .jfx-combo-box .jfx-list-cell:selected
 {
@@ -107,19 +135,37 @@
 * Tree table view                                                             *
 ******************************************************************************/
 
-.tree-table-view .tree-table-row-cell:odd  { -fx-background-color: -grey-100; }
+.jfx-tree-table-view
+{
+    -fx-background-radius: 2;
+    /*-fx-background-color: -jfx-background-color;*/
+}
 
-.jfx-tree-table-view .tree-table-row-cell:selected { -fx-background-color: #BDBDBD; }
+.jfx-tree-table-view:focused
+{
+    -fx-background-color: -fx-faint-focus-color, -fx-focus-color, -fx-control-inner-background;
+    -fx-background-insets: -1.4, -0.3, 1;
+}
 
-.jfx-tree-table-view:focused .tree-table-row-cell:selected { -fx-background-color: -jfx-light-primary-color; }
+.jfx-tree-table-view .virtual-flow, .jfx-tree-table-view .virtual-flow .corner { -fx-background-color: -jfx-background-color; }
 
-.jfx-tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell { -fx-text-fill: WHITE; }
+.jfx-tree-table-view .column-header-background { -fx-background-color: -jfx-background-color; }
 
-.jfx-tree-table-view .column-resize-line, .jfx-tree-table-view .column-drag-header { -fx-background-color: -jfx-light-primary-color; }
+.jfx-tree-table-view .tree-table-row-cell  { -fx-background-color: -jfx-background-color; }
 
-.jfx-tree-table-view .column-overlay { -fx-background-color: -fx-accent; }
+.jfx-tree-table-view .tree-table-row-cell:odd  { -fx-background-color: rgba(189, 189, 189, 0.15); }
 
-.jfx-tree-table-view .column-drag-header .label { -fx-text-fill: WHITE; }
+/*.jfx-tree-table-view .tree-table-row-cell:selected { -fx-background-color: #BDBDBD; }*/
+
+/*.jfx-tree-table-view:focused .tree-table-row-cell:selected { -fx-background-color: -jfx-light-primary-color; }*/
+
+/*.jfx-tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell { -fx-text-fill: WHITE; }*/
+
+/*.jfx-tree-table-view .column-resize-line, .jfx-tree-table-view .column-drag-header { -fx-background-color: -jfx-light-primary-color; }*/
+
+/*.jfx-tree-table-view .column-overlay { -fx-background-color: -fx-accent; }*/
+
+/*.jfx-tree-table-view .column-drag-header .label { -fx-text-fill: WHITE; }*/
 
 /******************************************************************************
 * Snackbar                                                                    *
@@ -191,7 +237,7 @@
 
 .scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb
 {
-    -fx-background-color: #BDBDBD; /* Color de la barra */
+    -fx-background-color: rgba(100, 100, 100, .6); /* Color de la barra */
     -fx-background-radius: 8EM;
     -fx-border-radius: 8EM;
     -fx-pref-height: 10PX;

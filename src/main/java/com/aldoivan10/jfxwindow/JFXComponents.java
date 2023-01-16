@@ -60,7 +60,7 @@ public class JFXComponents extends GridPane
         this.addComponent(toggleButton,1,1);
 
         JFXListView<String> listView = new JFXListView<>();
-        for(int i = 0; i < 5; i++) { listView.getItems().add(String.format("Item: %s",i)); }
+        for(int i = 1; i <= 50; i++) { listView.getItems().add(String.format("Item: %s",i)); }
 
         this.addComponent(listView, 1,3);
 

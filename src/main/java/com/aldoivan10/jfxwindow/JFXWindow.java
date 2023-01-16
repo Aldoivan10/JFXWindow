@@ -58,7 +58,7 @@ public class JFXWindow
 
         this.setWindowMinSize(300,250);
         this.setWindowSize(800,600);
-        this.setTheme(JFXTheme.LIGHT);
+        this.setTheme(JFXTheme.DARK);
         this.setLook(JFXLook.WIN11);
     }
 
