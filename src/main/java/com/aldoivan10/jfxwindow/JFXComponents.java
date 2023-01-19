@@ -153,14 +153,14 @@ public class JFXComponents extends GridPane
         StackPane container = new StackPane(node);
         container.getStyleClass().add("pane");
         this.add(container,col,row);
-        JFXDepthManager.setDepth(container,1);
+//        JFXDepthManager.setDepth(container,1);
     }
 
     private void addComponent(Pane container, int col, int row)
     {
         container.getStyleClass().add("pane");
         this.add(container,col,row);
-        JFXDepthManager.setDepth(container,1);
+//        JFXDepthManager.setDepth(container,1);
     }
 
     private ColumnConstraints columnConstraints()

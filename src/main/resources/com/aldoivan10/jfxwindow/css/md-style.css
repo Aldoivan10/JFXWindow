@@ -1,5 +1,4 @@
-*
-{
+* {
     -jfx-light-primary-color: -indigo-A200;
     -jfx-dark-primary-color: -indigo-A700;
     -jfx-primary-color: -indigo-A400;
@@ -14,6 +13,9 @@
     -fx-text-base-color: -jfx-font-color;
     -jfx-unfocus-color: -jfx-un-focus-color;
     -fx-focus-color: -fx-accent;
+    -fx-base: -jfx-pane-color;
+
+    -fx-box-border: ladder(-fx-color, -jfx-border-color 20%, derive(-fx-color, -15%) 30%);
 }
 
 .container { -fx-background-color: -jfx-container-color; }
@@ -83,12 +85,12 @@
 {
     -fx-border-radius: 2;
     -fx-background-radius: 2;
-    -fx-background-color: rgba(189, 189, 189, 0.8);
+    -fx-background-color: -jfx-background-color;
 }
 
 .jfx-chip-view .jfx-chip > HBox
 {
-    -fx-background-color: #E0E0E0;
+    -fx-background-color: rgba(189, 189, 189, .5);
     -fx-padding: 5 5 5 8;
     -fx-font-size: 12.0;
     -fx-pref-height: 0;
@@ -101,17 +103,16 @@
 .jfx-list-view
 {
     -fx-background-radius: 2;
-    -fx-background-color: -jfx-border-color;
 }
 
 .jfx-list-view:focused
 {
-    -fx-background-color: derive(-jfx-primary-color,30%), -jfx-light-primary-color;
-    -fx-background-radius: 2, 2;
+    -fx-background-color: -fx-faint-focus-color, -jfx-focus-border-color, -fx-control-inner-background;
+    -fx-background-insets: -1.4, -0.3, 1;
+    -fx-background-radius: 2, 2, 2;
 }
 
 .jfx-list-view .virtual-flow .corner { -fx-background-color: -jfx-background-color; }
-
 
 .jfx-list-view .jfx-rippler, .jfx-combo-box .jfx-rippler { -jfx-rippler-fill: WHITE; }
 
@@ -135,16 +136,13 @@
 * Tree table view                                                             *
 ******************************************************************************/
 
-.jfx-tree-table-view
-{
-    -fx-background-radius: 2;
-    /*-fx-background-color: -jfx-background-color;*/
-}
+.jfx-tree-table-view { -fx-background-radius: 2; }
 
 .jfx-tree-table-view:focused
 {
-    -fx-background-color: -fx-faint-focus-color, -fx-focus-color, -fx-control-inner-background;
+    -fx-background-color: -fx-faint-focus-color, -jfx-focus-border-color, -fx-control-inner-background;
     -fx-background-insets: -1.4, -0.3, 1;
+    -fx-background-radius: 2, 2, 2;
 }
 
 .jfx-tree-table-view .virtual-flow, .jfx-tree-table-view .virtual-flow .corner { -fx-background-color: -jfx-background-color; }
