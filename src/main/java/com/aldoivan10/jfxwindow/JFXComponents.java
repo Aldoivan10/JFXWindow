@@ -120,7 +120,6 @@ public class JFXComponents extends GridPane
         this.addComponent(new StackPane(treeTableRow),0,3);
 
         JFXChipView<String> chipView = new JFXChipView<>();
-        chipView.setStyle("-fx-border-color: LIGHTGRAY;");
         chipView.getChips().add("Chipview");
         this.addComponent(chipView, 2,3);
 

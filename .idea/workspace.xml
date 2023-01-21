@@ -99,7 +99,9 @@
       <workItem from="1673634265524" duration="27098000" />
       <workItem from="1673719029639" duration="3683000" />
       <workItem from="1673819606499" duration="14340000" />
-      <workItem from="1674068917158" duration="6266000" />
+      <workItem from="1674068917158" duration="6901000" />
+      <workItem from="1674170646510" duration="6799000" />
+      <workItem from="1674251392695" duration="5932000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -136,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673899842065</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Selected better colors">
+      <created>1674099069821</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674099069821</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

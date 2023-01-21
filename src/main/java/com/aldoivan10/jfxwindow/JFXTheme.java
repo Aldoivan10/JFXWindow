@@ -2,8 +2,8 @@ package com.aldoivan10.jfxwindow;
 
 public enum JFXTheme
 {
-    LIGHT("#333333","WHITE", "#FAFAFA","#4d4d4d", "WHITE", "#CACACA", "-fx-focus-color"),
-    DARK("#BDBDBD","#1B1B1B", "#121212","#BDBDBD", "#242424", "#343434", "derive(-fx-focus-color, -40%)");
+    LIGHT("#333333","WHITE", "#FAFAFA","#4d4d4d", "WHITE", "#CACACA", "-fx-focus-color","#989898"),
+    DARK("#BDBDBD","#1B1B1B", "#121212","#5A5A5A", "#242424", "#343434", "derive(-fx-focus-color, -40%)","#5A5A5A");
 
     private final String fontColor;
     private final String paneColor;
@@ -12,9 +12,10 @@ public enum JFXTheme
     private final String bgColor;
     private final String borderColor;
     private final String focusColor;
+    private final String trackColor;
 
 
-    JFXTheme(String fontColor, String paneColor, String containerColor, String unFocusColor, String bgColor, String borderColor, String focusColor)
+    JFXTheme(String fontColor, String paneColor, String containerColor, String unFocusColor, String bgColor, String borderColor, String focusColor, String trackColor)
     {
         this.fontColor = fontColor;
         this.paneColor = paneColor;
@@ -23,6 +24,7 @@ public enum JFXTheme
         this.bgColor = bgColor;
         this.borderColor = borderColor;
         this.focusColor = focusColor;
+        this.trackColor = trackColor;
     }
 
     public String toString()
@@ -33,7 +35,8 @@ public enum JFXTheme
                         "-jfx-un-focus-color: %s;" +
                         "-jfx-border-color: %s;" +
                         "-jfx-focus-border-color: %s;" +
+                        "-jfx-track-color: %s;" +
                         "-jfx-background-color: %s;",
-                this.fontColor, this.containerColor, this.paneColor, this.unFocusColor, this.borderColor, this.focusColor, this.bgColor);
+                this.fontColor, this.containerColor, this.paneColor, this.unFocusColor, this.borderColor, this.focusColor, this.trackColor, this.bgColor);
     }
 }
