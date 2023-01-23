@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextFlow;
@@ -26,105 +27,108 @@ public class JFXComponents extends GridPane
 {
     public JFXComponents(BorderPane parent, JFXWindow window)
     {
+        final ObservableList<String> items = FXCollections.observableArrayList();
+
         this.setVgap(15);
         this.setHgap(15);
         this.setPadding(new Insets(15));
         for(int i = 0;i < 3;i++) { this.getColumnConstraints().add(this.columnConstraints()); }
+        for(int i = 1;i <= 50;i++) { items.add(String.format("Item %s", i)); }
 
         JFXButton button = new JFXButton("Button");
         this.addComponent(button, 0,0);
 
-        JFXTextField textField = new JFXTextField();
-        textField.setLabelFloat(true);
-        textField.setPromptText("Text field");
-        this.addComponent(textField, 1,0);
-
-        JFXTextArea textArea = new JFXTextArea();
-        textArea.setPromptText("Text area");
-        textArea.setPrefSize(150,50);
-        this.addComponent(textArea, 2,0);
+        JFXToggleNode toggleNode = new JFXToggleNode("Toggle node");
+        this.addComponent(toggleNode,1,0);
 
         JFXCheckBox checkBox = new JFXCheckBox("Checkbox");
-        this.addComponent(checkBox, 3,0);
-
-        JFXSlider slider = new JFXSlider();
-        this.addComponent(slider, 0,1);
+        this.addComponent(checkBox, 2,0);
 
         JFXToggleButton toggleButton = new JFXToggleButton();
         toggleButton.setText("Toggle button");
-        toggleButton.setOnAction(event ->
-        {
-            if(toggleButton.isSelected()) window.setTheme(JFXTheme.DARK);
-            else window.setTheme(JFXTheme.LIGHT);
-        });
-        this.addComponent(toggleButton,1,1);
+        this.addComponent(toggleButton,3,0);
 
-        JFXListView<String> listView = new JFXListView<>();
-        for(int i = 1; i <= 50; i++) { listView.getItems().add(String.format("Item: %s",i)); }
+        JFXTextField textField = new JFXTextField();
+        textField.setLabelFloat(true);
+        textField.setPromptText("Text field");
+        this.addComponent(textField, 0,1);
 
-        this.addComponent(listView, 1,3);
+        JFXTextArea textArea = new JFXTextArea();
+        textArea.setPromptText("Text area");
+        textArea.setPrefSize(200,50);
+        textArea.setLabelFloat(true);
+        this.addComponent(textArea, 1,1);
 
         JFXComboBox<String> comboBox = new JFXComboBox<>();
-        comboBox.getItems().addAll(listView.getItems());
         comboBox.setPromptText("Combobox");
+        comboBox.getItems().addAll(items);
         comboBox.setLabelFloat(true);
         this.addComponent(comboBox, 2,1);
 
-        JFXColorPicker colorPicker = new JFXColorPicker();
-        this.addComponent(colorPicker, 3,1);
-
-        JFXSpinner spinner = new JFXSpinner();
-        spinner.setProgress(0.5);
-        this.addComponent(spinner,0,2);
-
         JFXDatePicker datePicker = new JFXDatePicker();
-        this.addComponent(datePicker, 1,2);
+        this.addComponent(datePicker, 3,1);
 
-        JFXTimePicker timePicker = new JFXTimePicker();
-        this.addComponent(timePicker, 2,2);
+//        JFXSpinner spinner = new JFXSpinner();
+//        spinner.setProgress(0.5);
+//        this.addComponent(spinner,3,0);
 
-        JFXButton btnSnackBar = new JFXButton("Snackbar");
-        btnSnackBar.setOnAction(event ->
-        {
-            JFXSnackbar snackbar = new JFXSnackbar(parent);
-            snackbar.enqueue(new JFXSnackbar.SnackbarEvent(new JFXSnackbarLayout("This is a snackbar message","Action",event1 -> {}), Duration.seconds(2)));
-        });
-        this.addComponent(btnSnackBar, 3,2);
+//        JFXSlider slider = new JFXSlider();
+//        this.addComponent(slider, 0,1);
+//
+//        JFXListView<String> listView = new JFXListView<>();
+//        for(int i = 1; i <= 50; i++) { listView.getItems().add(String.format("Item: %s",i)); }
+//
+//        this.addComponent(listView, 1,3);
+//
+//
+//        JFXColorPicker colorPicker = new JFXColorPicker();
+//        this.addComponent(colorPicker, 3,1);
+//
+//        JFXTimePicker timePicker = new JFXTimePicker();
+//        this.addComponent(timePicker, 2,2);
+//
+//        JFXButton btnSnackBar = new JFXButton("Snackbar");
+//        btnSnackBar.setOnAction(event ->
+//        {
+//            JFXSnackbar snackbar = new JFXSnackbar(parent);
+//            snackbar.enqueue(new JFXSnackbar.SnackbarEvent(new JFXSnackbarLayout("This is a snackbar message","Action",event1 -> {}), Duration.seconds(2)));
+//        });
+//        this.addComponent(btnSnackBar, 3,2);
+//
+//        JFXButton btnDialog = new JFXButton("Dialog");
+//        btnDialog.setOnAction(event ->
+//        {
+//            JFXAlert<Void> alert = new JFXAlert<>(parent.getScene().getWindow());
+//            alert.initModality(Modality.NONE);
+//            alert.setOverlayClose(false);
+//
+//            JFXDialogLayout layout = new JFXDialogLayout();
+//            layout.setHeading(new Label("Prueba de alerta"));
+//
+//            TextFlow txtFlow = new TextFlow();
+//            txtFlow.setTextAlignment(TextAlignment.JUSTIFY);
+//            txtFlow.getChildren().add(new Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis autem magni odio veritatis consectetur nostrum libero sed obcaecati similique ad aliquid repellendus aperiam fuga quidem at inventore, assumenda aliquam ea"));
+//            layout.setBody(txtFlow);
+//
+//            JFXButton closeButton = new JFXButton("Aceptar");
+//            closeButton.getStyleClass().add("btn-only-text-accent");
+//            closeButton.setOnAction(event1 -> alert.close());
+//            closeButton.setDefaultButton(true);
+//            layout.setActions(closeButton);
+//            alert.setContent(layout);
+//            alert.show();
+//        });
+//        this.addComponent(btnDialog, 3,3);
+//
+//        JFXTreeTableView<User> treeTableRow = this.getTreeTable();
+//        this.addComponent(new StackPane(treeTableRow),0,3);
+//
+//        JFXChipView<String> chipView = new JFXChipView<>();
+//        chipView.getChips().add("Chipview");
+//        this.addComponent(chipView, 2,3);
 
-        JFXButton btnDialog = new JFXButton("Dialog");
-        btnDialog.setOnAction(event ->
-        {
-            JFXAlert<Void> alert = new JFXAlert<>(parent.getScene().getWindow());
-            alert.initModality(Modality.NONE);
-            alert.setOverlayClose(false);
-
-            JFXDialogLayout layout = new JFXDialogLayout();
-            layout.setHeading(new Label("Prueba de alerta"));
-
-            TextFlow txtFlow = new TextFlow();
-            txtFlow.setTextAlignment(TextAlignment.JUSTIFY);
-            txtFlow.getChildren().add(new Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis autem magni odio veritatis consectetur nostrum libero sed obcaecati similique ad aliquid repellendus aperiam fuga quidem at inventore, assumenda aliquam ea"));
-            layout.setBody(txtFlow);
-
-            JFXButton closeButton = new JFXButton("Aceptar");
-            closeButton.getStyleClass().add("btn-only-text-accent");
-            closeButton.setOnAction(event1 -> alert.close());
-            closeButton.setDefaultButton(true);
-            layout.setActions(closeButton);
-            alert.setContent(layout);
-            alert.show();
-        });
-        this.addComponent(btnDialog, 3,3);
-
-        JFXTreeTableView<User> treeTableRow = this.getTreeTable();
-        this.addComponent(new StackPane(treeTableRow),0,3);
-
-        JFXChipView<String> chipView = new JFXChipView<>();
-        chipView.getChips().add("Chipview");
-        this.addComponent(chipView, 2,3);
-
-        colorPicker.setOnAction(event ->
-        {
+//        colorPicker.setOnAction(event ->
+//        {
 //            if(this.decorator !=null)
 //            {
 //                Color selectedColor = colorPicker.getValue();
@@ -144,13 +148,14 @@ public class JFXComponents extends GridPane
 //
 //                this.decorator.setStyle(style);
 //            }
-        });
+//        });
     }
 
     private void addComponent(Node node, int col, int row)
     {
         StackPane container = new StackPane(node);
         container.getStyleClass().add("pane");
+        container.setPadding(new Insets(20));
         this.add(container,col,row);
 //        JFXDepthManager.setDepth(container,1);
     }
