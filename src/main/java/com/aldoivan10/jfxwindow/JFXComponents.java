@@ -16,7 +16,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextFlow;
@@ -37,6 +36,7 @@ public class JFXComponents extends GridPane
         for(int i = 1;i <= 50;i++) { items.add(String.format("Item %s", i)); }
 
         JFXButton button = new JFXButton("Button");
+        button.setStyle("-fx-text-fill: -jfx-primary-color");
         this.addComponent(button, 0,0);
 
         JFXToggleNode toggleNode = new JFXToggleNode("Toggle node");
@@ -79,7 +79,6 @@ public class JFXComponents extends GridPane
         JFXSlider slider = new JFXSlider();
         this.addComponent(slider, 2,2);
 
-
         JFXColorPicker colorPicker = new JFXColorPicker();
         this.addComponent(colorPicker, 3,2);
 
@@ -117,7 +116,6 @@ public class JFXComponents extends GridPane
             layout.setBody(txtFlow);
 
             JFXButton closeButton = new JFXButton("Aceptar");
-            closeButton.getStyleClass().add("btn-only-text-accent");
             closeButton.setOnAction(event1 -> alert.close());
             closeButton.setDefaultButton(true);
             layout.setActions(closeButton);

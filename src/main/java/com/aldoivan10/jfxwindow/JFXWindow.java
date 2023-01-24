@@ -52,14 +52,14 @@ public class JFXWindow
         this.parent.setCenter(this.container);
         this.parent.getStyleClass().add("container");
 
+        this.setWindowMinSize(300,250);
+        this.setWindowSize(800,600);
+        this.setTheme(JFXTheme.BLUE_GREY);
+        this.setLook(JFXLook.WIN11);
+
         this.addStyleSheets(JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm(),
                 JFoenixResources.load("css/jfoenix-design.css").toExternalForm(),
                 Objects.requireNonNull(this.getClass().getResource("css/md-style.css")).toExternalForm());
-
-        this.setWindowMinSize(300,250);
-        this.setWindowSize(800,600);
-        this.setTheme(JFXTheme.DARK);
-        this.setLook(JFXLook.WIN11);
     }
 
     public void setTheme(JFXTheme theme)

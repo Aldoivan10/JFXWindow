@@ -19,12 +19,12 @@
 
     -fx-font-family: Roboto;
 
-    -jfx-light-primary-color: -indigo-A200;
-    -jfx-dark-primary-color: -indigo-A700;
-    -jfx-primary-color: -indigo-A400;
-    -fx-accent: -indigo-A100;
+    /*-jfx-light-primary-color: -indigo-A200;*/
+    /*-jfx-dark-primary-color: -indigo-A700;*/
+    /*-jfx-primary-color: -indigo-A400;*/
+    /*-fx-accent: -indigo-A100;*/
 
-    -fx-box-border: ladder(-fx-color, -jfx-border-color 20%, derive(-fx-color, -15%) 30%);
+    -fx-box-border: ladder(-fx-color, -jfx-un-checked-color 20%, derive(-fx-color, -15%) 30%);
     -jfx-unchecked-color: -jfx-un-checked-color;
     -jfx-checked-color: -jfx-primary-color;
     -jfx-selected-color: -jfx-primary-color;
@@ -137,8 +137,6 @@
     -fx-font-size: 13;
     -fx-fill: #757575;
 }
-
-.jfx-dialog-layout .jfx-button { -fx-text-fill: -jfx-primary-color; }
 
 /******************************************************************************
 * Chip view                                                                   *

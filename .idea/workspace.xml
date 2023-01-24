@@ -7,7 +7,8 @@
     <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Selected better colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style-test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +108,7 @@
       <workItem from="1674251392695" duration="6276000" />
       <workItem from="1674322015252" duration="621000" />
       <workItem from="1674358590053" duration="19763000" />
-      <workItem from="1674503013114" duration="11722000" />
+      <workItem from="1674503013114" duration="15609000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674454652767</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Selected better colors">
+      <created>1674524823857</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674524823857</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
