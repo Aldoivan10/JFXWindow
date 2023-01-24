@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXRadioButton;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -26,6 +27,7 @@ public class Test extends Application
 
     public static ScrollPane getThemes(JFXWindow window)
     {
+        ToggleGroup group = new ToggleGroup();
         ScrollPane scrollPane = new ScrollPane();
         VBox themeContainer = new VBox(15);
         themeContainer.setPadding(new Insets(15));
@@ -36,7 +38,10 @@ public class Test extends Application
         {
             JFXRadioButton radioButton = new JFXRadioButton(theme.theme());
             radioButton.setStyle(String.format("-jfx-selected-color: %s;", theme.primary()));
+            radioButton.setSelected(theme.equals(JFXTheme.DEEP_PURPLE_A));
+            radioButton.setOnAction(event -> window.setTheme(theme));
             themeContainer.getChildren().add(radioButton);
+            radioButton.setToggleGroup(group);
         }
         return scrollPane;
     }

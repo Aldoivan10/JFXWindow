@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Added color themes">
+    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Added drawer for select theme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" afterDir="false" />
     </list>
@@ -110,7 +108,7 @@
       <workItem from="1674322015252" duration="621000" />
       <workItem from="1674358590053" duration="19763000" />
       <workItem from="1674503013114" duration="21399000" />
-      <workItem from="1674582531961" duration="1635000" />
+      <workItem from="1674582531961" duration="5627000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674528723333</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added drawer for select theme">
+      <created>1674584416251</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674584416251</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +211,8 @@
     <MESSAGE value="Added light and dark theme" />
     <MESSAGE value="Selected better colors" />
     <MESSAGE value="Added color themes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added color themes" />
+    <MESSAGE value="Added drawer for select theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added drawer for select theme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
