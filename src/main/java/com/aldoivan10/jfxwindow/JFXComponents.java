@@ -10,6 +10,7 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TreeItem;
@@ -68,103 +69,85 @@ public class JFXComponents extends GridPane
         JFXDatePicker datePicker = new JFXDatePicker();
         this.addComponent(datePicker, 3,1);
 
-//        JFXSpinner spinner = new JFXSpinner();
-//        spinner.setProgress(0.5);
-//        this.addComponent(spinner,3,0);
+        JFXTimePicker timePicker = new JFXTimePicker();
+        this.addComponent(timePicker, 0,2);
 
-//        JFXSlider slider = new JFXSlider();
-//        this.addComponent(slider, 0,1);
-//
-//        JFXListView<String> listView = new JFXListView<>();
-//        for(int i = 1; i <= 50; i++) { listView.getItems().add(String.format("Item: %s",i)); }
-//
-//        this.addComponent(listView, 1,3);
-//
-//
-//        JFXColorPicker colorPicker = new JFXColorPicker();
-//        this.addComponent(colorPicker, 3,1);
-//
-//        JFXTimePicker timePicker = new JFXTimePicker();
-//        this.addComponent(timePicker, 2,2);
-//
-//        JFXButton btnSnackBar = new JFXButton("Snackbar");
-//        btnSnackBar.setOnAction(event ->
-//        {
-//            JFXSnackbar snackbar = new JFXSnackbar(parent);
-//            snackbar.enqueue(new JFXSnackbar.SnackbarEvent(new JFXSnackbarLayout("This is a snackbar message","Action",event1 -> {}), Duration.seconds(2)));
-//        });
-//        this.addComponent(btnSnackBar, 3,2);
-//
-//        JFXButton btnDialog = new JFXButton("Dialog");
-//        btnDialog.setOnAction(event ->
-//        {
-//            JFXAlert<Void> alert = new JFXAlert<>(parent.getScene().getWindow());
-//            alert.initModality(Modality.NONE);
-//            alert.setOverlayClose(false);
-//
-//            JFXDialogLayout layout = new JFXDialogLayout();
-//            layout.setHeading(new Label("Prueba de alerta"));
-//
-//            TextFlow txtFlow = new TextFlow();
-//            txtFlow.setTextAlignment(TextAlignment.JUSTIFY);
-//            txtFlow.getChildren().add(new Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis autem magni odio veritatis consectetur nostrum libero sed obcaecati similique ad aliquid repellendus aperiam fuga quidem at inventore, assumenda aliquam ea"));
-//            layout.setBody(txtFlow);
-//
-//            JFXButton closeButton = new JFXButton("Aceptar");
-//            closeButton.getStyleClass().add("btn-only-text-accent");
-//            closeButton.setOnAction(event1 -> alert.close());
-//            closeButton.setDefaultButton(true);
-//            layout.setActions(closeButton);
-//            alert.setContent(layout);
-//            alert.show();
-//        });
-//        this.addComponent(btnDialog, 3,3);
-//
-//        JFXTreeTableView<User> treeTableRow = this.getTreeTable();
-//        this.addComponent(new StackPane(treeTableRow),0,3);
-//
-//        JFXChipView<String> chipView = new JFXChipView<>();
-//        chipView.getChips().add("Chipview");
-//        this.addComponent(chipView, 2,3);
+        JFXSpinner spinner = new JFXSpinner();
+        spinner.setProgress(0.5);
+        this.addComponent(spinner,1,2);
 
-//        colorPicker.setOnAction(event ->
-//        {
-//            if(this.decorator !=null)
-//            {
-//                Color selectedColor = colorPicker.getValue();
-//
-//                float r = (float) selectedColor.getRed();
-//                float g = (float) selectedColor.getGreen();
-//                float b = (float) selectedColor.getBlue();
-//
-//                float[] rgb = new float[]{ r, g, b };
-//
-//                String primary = ColorUtil.color2Hex(selectedColor);
-//                String darker = ColorUtil.color2Hex(ColorUtil.darken(rgb, 6));
-//                String lighten = ColorUtil.color2Hex(ColorUtil.lighten(rgb, 26));
-//                String accent = ColorUtil.color2Hex(ColorUtil.lighten(rgb, 18));
-//
-//                String style = String.format("-jfx-primary-color: %s; -jfx-dark-primary-color: %s; -jfx-light-primary-color: %s; -fx-accent: %s;", primary,darker,lighten,accent);
-//
-//                this.decorator.setStyle(style);
-//            }
-//        });
+        JFXSlider slider = new JFXSlider();
+        this.addComponent(slider, 2,2);
+
+
+        JFXColorPicker colorPicker = new JFXColorPicker();
+        this.addComponent(colorPicker, 3,2);
+
+        JFXListView<String> listView = new JFXListView<>();
+        listView.getItems().addAll(items);
+        this.addComponent(listView, 0,3);
+
+        JFXTreeTableView<User> treeTableRow = this.getTreeTable();
+        this.addComponent(new StackPane(treeTableRow),1,3);
+
+        JFXChipView<String> chipView = new JFXChipView<>();
+        chipView.getChips().add("Chipview");
+        this.addComponent(chipView, 3,3);
+
+        JFXButton btnSnackBar = new JFXButton("Snackbar");
+        btnSnackBar.setOnAction(event ->
+        {
+            JFXSnackbar snackbar = new JFXSnackbar(parent);
+            snackbar.enqueue(new JFXSnackbar.SnackbarEvent(new JFXSnackbarLayout("This is a snackbar message","Action",event1 -> {}), Duration.seconds(2)));
+        });
+
+        JFXButton btnDialog = new JFXButton("Dialog");
+        btnDialog.setOnAction(event ->
+        {
+            JFXAlert<Void> alert = new JFXAlert<>(parent.getScene().getWindow());
+            alert.initModality(Modality.NONE);
+            alert.setOverlayClose(false);
+
+            JFXDialogLayout layout = new JFXDialogLayout();
+            layout.setHeading(new Label("Prueba de alerta"));
+
+            TextFlow txtFlow = new TextFlow();
+            txtFlow.setTextAlignment(TextAlignment.JUSTIFY);
+            txtFlow.getChildren().add(new Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis autem magni odio veritatis consectetur nostrum libero sed obcaecati similique ad aliquid repellendus aperiam fuga quidem at inventore, assumenda aliquam ea"));
+            layout.setBody(txtFlow);
+
+            JFXButton closeButton = new JFXButton("Aceptar");
+            closeButton.getStyleClass().add("btn-only-text-accent");
+            closeButton.setOnAction(event1 -> alert.close());
+            closeButton.setDefaultButton(true);
+            layout.setActions(closeButton);
+            alert.setContent(layout);
+            alert.show();
+        });
+
+        JFXRadioButton radioButton = new JFXRadioButton("Radio button");
+
+        VBox vBox = new VBox(btnSnackBar, btnDialog, radioButton);
+        vBox.setSpacing(15);
+        vBox.setAlignment(Pos.CENTER);
+        this.addComponent(vBox,2,3);
     }
 
     private void addComponent(Node node, int col, int row)
     {
         StackPane container = new StackPane(node);
         container.getStyleClass().add("pane");
-        container.setPadding(new Insets(20));
+        container.setPadding(new Insets(15));
         this.add(container,col,row);
-//        JFXDepthManager.setDepth(container,1);
+        JFXDepthManager.setDepth(container,1);
     }
 
     private void addComponent(Pane container, int col, int row)
     {
         container.getStyleClass().add("pane");
+        container.setPadding(new Insets(15));
         this.add(container,col,row);
-//        JFXDepthManager.setDepth(container,1);
+        JFXDepthManager.setDepth(container,1);
     }
 
     private ColumnConstraints columnConstraints()
