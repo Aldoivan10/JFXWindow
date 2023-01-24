@@ -1,5 +1,7 @@
-package com.aldoivan10.jfxwindow;
+package com.aldoivan10.jfxwindow_demo;
 
+import com.aldoivan10.jfxwindow.JFXTheme;
+import com.aldoivan10.jfxwindow.JFXWindow;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.application.Application;
 import javafx.geometry.Insets;

@@ -64,7 +64,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.aldoivan10.jfxwindow/com.aldoivan10.jfxwindow.Test</mainClass>
+                            <mainClass>com.aldoivan10.jfxwindow/com.aldoivan10.jfxwindow_demo.Test</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

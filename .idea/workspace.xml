@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Added drawer for select theme">
+    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Selected better themes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow_demo/JFXComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow_demo/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +71,12 @@
   </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.aldoivan10.jfxwindow.Test" />
+      <option name="MAIN_CLASS_NAME" value="com.aldoivan10.jfxwindow_demo.Test" />
       <module name="JFXWindow" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix --add-exports javafx.controls/com.sun.javafx.scene.control=com.jfoenix --add-exports javafx.base/com.sun.javafx.binding=com.jfoenix --add-exports javafx.graphics/com.sun.javafx.stage=com.jfoenix --add-exports javafx.graphics/com.sun.javafx.scene=com.jfoenix --add-exports javafx.base/com.sun.javafx.event=com.jfoenix --add-opens java.base/java.lang.reflect=com.jfoenix" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.aldoivan10.jfxwindow.*" />
+          <option name="PATTERN" value="com.aldoivan10.jfxwindow_demo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,7 +109,7 @@
       <workItem from="1674322015252" duration="621000" />
       <workItem from="1674358590053" duration="19763000" />
       <workItem from="1674503013114" duration="21399000" />
-      <workItem from="1674582531961" duration="5627000" />
+      <workItem from="1674582531961" duration="9761000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -187,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674584416251</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Selected better themes">
+      <created>1674599494884</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674599494884</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +220,8 @@
     <MESSAGE value="Selected better colors" />
     <MESSAGE value="Added color themes" />
     <MESSAGE value="Added drawer for select theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added drawer for select theme" />
+    <MESSAGE value="Selected better themes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Selected better themes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
