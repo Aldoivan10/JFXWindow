@@ -46,6 +46,14 @@ public enum JFXTheme
         this.name = name;
     }
 
+    public String primary() { return primary; }
+
+    public String accent() { return accent; }
+
+    public String light() { return light; }
+
+    public String dark() { return dark; }
+
     public String theme() { return this.name; }
 
     public String toString()

@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
@@ -26,6 +27,7 @@ public class JFXWindow
     private Scene scene;
     private JFXLook look;
     private JFXTheme theme;
+    private JFXDrawer drawer;
     private final Stage stage;
     private JFXToolbar toolbar;
     private JFXDecorator decorator;
@@ -54,7 +56,7 @@ public class JFXWindow
 
         this.setWindowMinSize(300,250);
         this.setWindowSize(800,600);
-        this.setTheme(JFXTheme.BLUE_GREY);
+        this.setTheme(JFXTheme.DEEP_PURPLE_A);
         this.setLook(JFXLook.WIN11);
 
         this.addStyleSheets(JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm(),
@@ -67,6 +69,8 @@ public class JFXWindow
         this.decorator.setStyle(String.valueOf(theme));
         this.theme = theme;
     }
+
+    public JFXTheme theme() { return this.theme; }
 
     public void setLook(JFXLook look)
     {
@@ -134,40 +138,51 @@ public class JFXWindow
 
     public void setContent(Node node) { this.container.getChildren().add(node); }
 
-    public void setDrawerContent(Node node)
+    public void setDrawerContent(Region node)
     {
         if(this.toolbar == null) { this.toolbar = new JFXToolbar(); }
 
-        JFXDrawer drawer = new JFXDrawer();
-        drawer.setContent(this.container);
-        drawer.setSidePane(node);
-        drawer.setPrefWidth(250);
+        this.drawer = new JFXDrawer();
+        this.drawer.setContent(this.container);
+        this.drawer.setDefaultDrawerSize(node.getPrefWidth());
+        this.drawer.setSidePane(node);
 
         this.toolbar.setPadding(new Insets(5,10,5,10));
-        this.toolbar.getLeftItems().add(this.buildHmbButton(drawer));
+        this.toolbar.getLeftItems().add(this.buildHmbButton(this.drawer));
 
-        this.parent.setCenter(drawer);
+        this.parent.setCenter(this.drawer);
         this.parent.setTop(this.toolbar);
     }
+
+    public void setDrawer(JFXDrawer drawer) { this.drawer = drawer; }
+
+    public JFXDrawer drawer() { return this.drawer; }
 
     private JFXRippler buildHmbButton(JFXDrawer drawer)
     {
         JFXHamburger hmbButton = new JFXHamburger();
-        JFXRippler rippler = new JFXRippler(hmbButton, JFXRippler.RipplerMask.CIRCLE);
+        JFXRippler ripple = new JFXRippler(hmbButton, JFXRippler.RipplerMask.CIRCLE);
         HamburgerBasicCloseTransition animation = new HamburgerBasicCloseTransition(hmbButton);
         hmbButton.addEventHandler(MouseEvent.MOUSE_PRESSED, e ->
         {
-            animation.setRate(animation.getRate() * -1);
-            animation.play();
-
             if(drawer.isClosed() || drawer.isClosing()) drawer.open();
             else drawer.close();
         });
+        drawer.setOnDrawerOpening(jfxDrawerEvent ->
+        {
+            animation.setRate(animation.getRate() * -1);
+            animation.play();
+        });
+        drawer.setOnDrawerClosing(jfxDrawerEvent ->
+        {
+            animation.setRate(animation.getRate() * -1);
+            animation.play();
+        });
         animation.setRate(-1);
         hmbButton.setPadding(new Insets(10));
-        rippler.setRipplerFill(Color.WHITE);
+        ripple.setRipplerFill(Color.WHITE);
 
-        return rippler;
+        return ripple;
     }
 
     public void setToolbar(JFXToolbar toolbar) { this.toolbar = toolbar; }

@@ -13,6 +13,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.layout.*;
@@ -23,16 +24,18 @@ import javafx.stage.Modality;
 import javafx.util.Duration;
 
 
-public class JFXComponents extends GridPane
+public class JFXComponents extends ScrollPane
 {
-    public JFXComponents(BorderPane parent, JFXWindow window)
+    private final GridPane grid = new GridPane();
+
+    public JFXComponents(BorderPane parent)
     {
         final ObservableList<String> items = FXCollections.observableArrayList();
 
-        this.setVgap(15);
-        this.setHgap(15);
-        this.setPadding(new Insets(15));
-        for(int i = 0;i < 3;i++) { this.getColumnConstraints().add(this.columnConstraints()); }
+        this.grid.setVgap(15);
+        this.grid.setHgap(15);
+        this.grid.setPadding(new Insets(15));
+        for(int i = 0;i < 3;i++) { this.grid.getColumnConstraints().add(this.columnConstraints()); }
         for(int i = 1;i <= 50;i++) { items.add(String.format("Item %s", i)); }
 
         JFXButton button = new JFXButton("Button");
@@ -83,13 +86,16 @@ public class JFXComponents extends GridPane
         this.addComponent(colorPicker, 3,2);
 
         JFXListView<String> listView = new JFXListView<>();
+        listView.setMaxHeight(300);
         listView.getItems().addAll(items);
         this.addComponent(listView, 0,3);
 
         JFXTreeTableView<User> treeTableRow = this.getTreeTable();
+        treeTableRow.setMaxHeight(300);
         this.addComponent(new StackPane(treeTableRow),1,3);
 
         JFXChipView<String> chipView = new JFXChipView<>();
+        chipView.setMaxHeight(300);
         chipView.getChips().add("Chipview");
         this.addComponent(chipView, 3,3);
 
@@ -128,7 +134,10 @@ public class JFXComponents extends GridPane
         VBox vBox = new VBox(btnSnackBar, btnDialog, radioButton);
         vBox.setSpacing(15);
         vBox.setAlignment(Pos.CENTER);
+
         this.addComponent(vBox,2,3);
+        this.setContent(this.grid);
+        this.setFitToWidth(true);
     }
 
     private void addComponent(Node node, int col, int row)
@@ -136,7 +145,7 @@ public class JFXComponents extends GridPane
         StackPane container = new StackPane(node);
         container.getStyleClass().add("pane");
         container.setPadding(new Insets(15));
-        this.add(container,col,row);
+        this.grid.add(container,col,row);
         JFXDepthManager.setDepth(container,1);
     }
 
@@ -144,7 +153,7 @@ public class JFXComponents extends GridPane
     {
         container.getStyleClass().add("pane");
         container.setPadding(new Insets(15));
-        this.add(container,col,row);
+        this.grid.add(container,col,row);
         JFXDepthManager.setDepth(container,1);
     }
 

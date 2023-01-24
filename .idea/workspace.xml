@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Selected better colors">
+    <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Added color themes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXTheme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/aldoivan10/jfxwindow/css/md-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +109,8 @@
       <workItem from="1674251392695" duration="6276000" />
       <workItem from="1674322015252" duration="621000" />
       <workItem from="1674358590053" duration="19763000" />
-      <workItem from="1674503013114" duration="15609000" />
+      <workItem from="1674503013114" duration="21399000" />
+      <workItem from="1674582531961" duration="1635000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674524823857</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added color themes">
+      <created>1674528723333</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674528723333</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +205,8 @@
     <MESSAGE value="Added more styles for JFoenix" />
     <MESSAGE value="Added light and dark theme" />
     <MESSAGE value="Selected better colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Selected better colors" />
+    <MESSAGE value="Added color themes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added color themes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

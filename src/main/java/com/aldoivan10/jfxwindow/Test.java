@@ -1,6 +1,10 @@
 package com.aldoivan10.jfxwindow;
 
+import com.jfoenix.controls.JFXRadioButton;
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Test extends Application
@@ -15,8 +19,26 @@ public class Test extends Application
                 this.getClass().getResource("icon/icon48x48.png").toExternalForm(),
                 this.getClass().getResource("icon/icon64x64.png").toExternalForm());
         window.setWindowTitle("Window test");
-        window.setContent(new JFXComponents(window.parent(), window));
+        window.setContent(new JFXComponents(window.parent()));
+        window.setDrawerContent(getThemes(window));
         window.show();
+    }
+
+    public static ScrollPane getThemes(JFXWindow window)
+    {
+        ScrollPane scrollPane = new ScrollPane();
+        VBox themeContainer = new VBox(15);
+        themeContainer.setPadding(new Insets(15));
+        scrollPane.setContent(themeContainer);
+        scrollPane.setPrefWidth(150);
+        scrollPane.setFitToWidth(true);
+        for(JFXTheme theme:JFXTheme.values())
+        {
+            JFXRadioButton radioButton = new JFXRadioButton(theme.theme());
+            radioButton.setStyle(String.format("-jfx-selected-color: %s;", theme.primary()));
+            themeContainer.getChildren().add(radioButton);
+        }
+        return scrollPane;
     }
 
     public static void main(String[] args) {
