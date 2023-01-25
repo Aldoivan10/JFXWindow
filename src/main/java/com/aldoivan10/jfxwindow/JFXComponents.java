@@ -1,4 +1,4 @@
-package com.aldoivan10.jfxwindow_demo;
+package com.aldoivan10.jfxwindow;
 
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.cells.editors.TextFieldEditorBuilder;

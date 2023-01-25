@@ -7,8 +7,8 @@
     <list default="true" id="8b7a339e-da1a-4488-9faf-ff5fcd85bf72" name="Changes" comment="Selected better themes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow_demo/JFXComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow_demo/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow_demo/JFXComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/JFXComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow_demo/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aldoivan10/jfxwindow/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,36 +47,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.css.dialects&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/aldoi/Documents/IdeaProjects/JFXWindow/src/main/resources/com/aldoivan10/jfxwindow_demo",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.css.dialects",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aldoi\Documents\IdeaProjects\JFXWindow\src\main\resources\com\aldoivan10\jfxwindow_demo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\aldoi\Documents\IdeaProjects\JFXWindow\src\main\resources\com\aldoivan10\jfxwindow\css" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.aldoivan10.jfxwindow" />
+      <recent name="com.aldoivan10" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.aldoivan10.jfxwindow_demo.Test" />
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aldoivan10.jfxwindow.Demo" />
       <module name="JFXWindow" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix --add-exports javafx.controls/com.sun.javafx.scene.control=com.jfoenix --add-exports javafx.base/com.sun.javafx.binding=com.jfoenix --add-exports javafx.graphics/com.sun.javafx.stage=com.jfoenix --add-exports javafx.graphics/com.sun.javafx.scene=com.jfoenix --add-exports javafx.base/com.sun.javafx.event=com.jfoenix --add-opens java.base/java.lang.reflect=com.jfoenix" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.aldoivan10.jfxwindow_demo.*" />
+          <option name="PATTERN" value="com.aldoivan10.jfxwindow.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,7 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Demo" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +117,8 @@
       <workItem from="1674322015252" duration="621000" />
       <workItem from="1674358590053" duration="19763000" />
       <workItem from="1674503013114" duration="21399000" />
-      <workItem from="1674582531961" duration="9761000" />
+      <workItem from="1674582531961" duration="10659000" />
+      <workItem from="1674676266379" duration="1275000" />
     </task>
     <task id="LOCAL-00001" summary="Created JFXWindow">
       <created>1673557387231</created>
@@ -195,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674599494884</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Selected better themes">
+      <created>1674603493132</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674603493132</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

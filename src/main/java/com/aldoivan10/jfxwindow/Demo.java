@@ -1,7 +1,5 @@
-package com.aldoivan10.jfxwindow_demo;
+package com.aldoivan10.jfxwindow;
 
-import com.aldoivan10.jfxwindow.JFXTheme;
-import com.aldoivan10.jfxwindow.JFXWindow;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -10,11 +8,12 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Test extends Application
+public class Demo extends Application
 {
     @Override
     public void start(Stage stage)
     {
+        final
         JFXWindow window = new JFXWindow(stage);
         window.setWindowIcon(this.getClass().getResource("icon/icon16x16.png").toExternalForm());
         window.addIcons(this.getClass().getResource("icon/icon16x16.png").toExternalForm(),
